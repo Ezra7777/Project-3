@@ -191,7 +191,7 @@ public class MethodsTest {
             String actual = code.getPopulation(countries, populations, nonExistingCountry);
             String expected = "-1";
 
-            //THEN
+            //THEN//
             assertEquals(expected, actual);
         }
 
