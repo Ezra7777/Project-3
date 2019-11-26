@@ -23,14 +23,24 @@ public class MethodsCode {
     //write you code here
     public int getTotal(String number) {
         int sum = 0;
-        for (String num : number.split("")) {
-            Integer digit = Integer.valueOf(num);
+
+        for (int i = 0; i < number.length(); i++) {
+            Integer digit = Integer.valueOf(number.substring(i, i + 1));
             if (digit % 2 == 0) {
                 sum += digit * 2;
             } else {
                 sum += digit * -1;
             }
         }
+
+//        for (String num : number.split("")) {
+//            Integer digit = Integer.valueOf(num);
+//            if (digit % 2 == 0) {
+//                sum += digit * 2;
+//            } else {
+//                sum += digit * -1;
+//            }
+//        }
 
         return sum == 0 ? -1 : sum;
     }
